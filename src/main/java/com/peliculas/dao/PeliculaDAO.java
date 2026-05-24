@@ -1,4 +1,4 @@
-package com.peliculas.daogi;
+package com.peliculas.dao;
 
 import com.peliculas.model.Pelicula;
 import java.util.List;
