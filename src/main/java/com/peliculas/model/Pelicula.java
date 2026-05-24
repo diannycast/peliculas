@@ -1,4 +1,5 @@
 // Clase para guardar las peliculas
+package com.peliculas.model;
 public class Pelicula {
 
     // Variables de la pelicula
