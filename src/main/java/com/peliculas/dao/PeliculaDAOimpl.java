@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // coneccion basde de datos para pelicula
-public class PeliculaDAOImpl implements PeliculaDAO {
+public class PeliculaDAOimpl implements PeliculaDAO {
 
     // pelicula por su id
     @Override
@@ -35,16 +35,30 @@ public class PeliculaDAOImpl implements PeliculaDAO {
         return pelicula;
     }
     //orden de peliculas por vistas
-@Override
-public  List<pelicula>ObtenerTodos(){
-        List<pelicula> lista = new ArrayList<>();
-        String sql  = "selecc * from pelicula order by vistas desc";
+    @Override
+    public List<Pelicula> obtenerTodos() {
+        List<Pelicula> lista = new ArrayList<>();
+        String sql = "SELECT * FROM pelicula ORDER BY vistas DESC";
         try {
-            PreparedStatement ps = DatabaseConnection.getConnection().prepareStatement();
+            PreparedStatement ps = DatabaseConnection.getConnection().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-            while (rs.next()){
-                pelicula
+            while (rs.next()) {
+                Pelicula p = new Pelicula();
+                p.setId(rs.getInt("id"));
+                p.setTitulo(rs.getString("titulo"));
+                p.setDirector(rs.getString("director"));
+                p.setAnio(rs.getInt("anio"));
+                p.setDuracionMin(rs.getInt("duracion_min"));
+                p.setVistas(rs.getInt("vistas"));
+                p.setIdCategoria(rs.getInt("id_categoria"));
+                p.setIdClasificacion(rs.getInt("id_clasificacion"));
+                lista.add(p);
             }
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        return lista;
+    }
         }
 }
 }
