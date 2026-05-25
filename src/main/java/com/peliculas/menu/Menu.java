@@ -15,7 +15,7 @@ public class Menu {
 
     public void iniciar() {
 
-        int opcion = 0;
+        int opcion = -1;
 
         // el menu se repite hasta que el usuario escriba 0
         while (opcion != 0) {
@@ -31,7 +31,6 @@ public class Menu {
 
             opcion = scanner.nextInt();
 
-            // dependiendo de lo que escribio el usuario llamo al metodo
             if (opcion == 1) {
                 buscarPorId();
             }
@@ -45,7 +44,7 @@ public class Menu {
                 filtrar();
             }
             if (opcion == 0) {
-                System.out.println("Hasta luego!");
+                System.out.println("Chao pues :* ");
             }
         }
     }
@@ -107,7 +106,6 @@ public class Menu {
         System.out.print("Escribe el ID de la clasificacion: ");
         int idClasificacion = scanner.nextInt();
 
-        // creo el objeto y le pongo los datos
         Pelicula nueva = new Pelicula();
         nueva.setTitulo(titulo);
         nueva.setDirector(director);

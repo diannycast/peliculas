@@ -1,3 +1,5 @@
+package com.peliculas;
+
 import com.peliculas.menu.Menu;
 
 public class Main {
