@@ -34,3 +34,17 @@ public class PeliculaDAOImpl implements PeliculaDAO {
         }
         return pelicula;
     }
+    //orden de peliculas por vistas
+@Override
+public  List<pelicula>ObtenerTodos(){
+        List<pelicula> lista = new ArrayList<>();
+        String sql  = "selecc * from pelicula order by vistas desc";
+        try {
+            PreparedStatement ps = DatabaseConnection.getConnection().prepareStatement();
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                pelicula
+            }
+        }
+}
+}
