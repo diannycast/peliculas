@@ -61,4 +61,13 @@ public class Menu {
             System.out.println("No existe una pelicula con ese ID");
         }
     }
+    public void verTodas() {
+        List<Pelicula> lista = dao.obtenerTodos();
+
+        System.out.println("Lista de peliculas ordenadas por vistas:");
+
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println(lista.get(i));
+        }
+    }
 
