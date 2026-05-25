@@ -48,3 +48,17 @@ public class Menu {
             }
         }
     }
+    public void buscarPorId() {
+        System.out.print("Escribe el ID de la pelicula: ");
+        int id = scanner.nextInt();
+
+        Pelicula resultado = dao.buscarPorId(id);
+
+        if (resultado != null) {
+            System.out.println("Pelicula encontrada: ");
+            System.out.println(resultado);
+        } else {
+            System.out.println("No existe una pelicula con ese ID");
+        }
+    }
+
