@@ -29,6 +29,6 @@ catalogo de peliculas en java y en neon con una base de datos. Es un sistema que
 
 # DIAGRAMA DE CLASES
 
-![Diagrama de Clases](DIAGRAMA.png)
+![Diagrama de Clases](DIAGRAMA.PNG)
 
 
