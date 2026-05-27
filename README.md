@@ -27,3 +27,8 @@ catalogo de peliculas en java y en neon con una base de datos. Es un sistema que
 
 -main: Es el que arranca todo el menu.
 
+# DIAGRAMA DE CLASES
+
+![Diagrama de Clases](DIAGRAMA.png)
+
+
