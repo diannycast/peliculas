@@ -3,20 +3,20 @@ package com.peliculas.dao;
 import com.peliculas.model.Pelicula;
 import java.util.List;
 
-//Interfaz DAO para operaciones CRUD y filtros sobre Pelicula.
+//Interfaz DAO y filtros sobre Pelicula.
 
 public interface PeliculaDAO {
-    // CREATE
+    // AGREGAR
     void agregar(Pelicula pelicula);
 
-    // READ
+    // LEER
     Pelicula buscarPorId(int id);
     List<Pelicula> obtenerTodos();
 
-    // UPDATE (Faltaba)
+    // ACTUALIZAR
     void actualizar(Pelicula pelicula);
 
-    // DELETE (Faltaba)
+    // ELIMINAR
     void eliminar(int id);
 
     // FILTROS ADICIONALES
